@@ -8,7 +8,7 @@ function generateTOTP() {
 
     try {
         const totp = new OTPAuth.TOTP({
-            secret: OTPAuth.Secret.fromB32(secret),
+            secret: OTPAuth.Secret.fromB32(secret),  // Base32シークレットを使用
             algorithm: "SHA-1",
             digits: 6,
             period: 30,
