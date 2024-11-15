@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOTP ジェネレーター</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        input, button {
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
+    <title>TOTP Generator</title>
+    
+    <!-- OTPAuthのCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/otpauth@0.4.0/dist/otpauth.min.js"></script>
+    
+    <!-- 自分のscript.js -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>TOTP ジェネレーター</h1>
-    <p>シークレットキーを入力してください:</p>
-    <input type="text" id="secret" placeholder="シークレットキー">
+    <h1>TOTP Generator</h1>
+    <label for="secret">シークレットキー:</label>
+    <input type="text" id="secret" placeholder="シークレットキーを入力">
     <button onclick="generateTOTP()">TOTPを生成</button>
-    <p id="otp" style="font-size: 24px; margin-top: 20px;"></p>
-
-    <script src="otpauth.min.js"></script>
-    <script src="script.js"></script>
+    
+    <p id="otp">現在のTOTP: </p>
 </body>
 </html>
