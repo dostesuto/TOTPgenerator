@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTP ジェネレーター</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TOTP ジェネレーター</h1>
+    <p>シークレットキーを入力してください:</p>
+    <input type="text" id="secret" placeholder="シークレットキー">
+    <button onclick="generateTOTP()">TOTPを生成</button>
+    <p id="otp" style="font-size: 24px; margin-top: 20px;"></p>
+
+    <script src="otpauth.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
